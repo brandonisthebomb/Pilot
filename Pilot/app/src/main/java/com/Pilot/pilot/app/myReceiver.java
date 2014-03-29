@@ -7,6 +7,7 @@ package com.Pilot.pilot.app;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 public class myReceiver extends BroadcastReceiver {
 
@@ -17,6 +18,7 @@ public class myReceiver extends BroadcastReceiver {
             if(intent.getAction().equals(Intent.ACTION_USER_PRESENT))
             {
                 Intent start = new Intent(context, MainActivity.class);
+                start.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(start);
             }
         }
