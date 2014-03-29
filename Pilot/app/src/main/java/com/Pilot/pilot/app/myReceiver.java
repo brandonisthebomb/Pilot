@@ -15,7 +15,7 @@ public class myReceiver extends BroadcastReceiver {
         // assumes WordService is a registered service
         intent = new Intent(context, MainActivity.class);
         if (intent.getAction()!=null) {
-            intent.getAction().equals(Intent.ACTION_USER_PRESENT)
+            intent.getAction().equals(Intent.ACTION_USER_PRESENT);
             context.startService(intent);
         }
     }
