@@ -10,7 +10,7 @@
         android:id="@+id/menuTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Main Menu"
+        android:text="Motivation Manager"
         android:textSize="45dp"
         android:textColor="@color/Black"
         android:layout_gravity="top|center"
