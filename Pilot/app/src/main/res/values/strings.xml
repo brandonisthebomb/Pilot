@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_create_goal">createGoalActivity</string>
     <string name="title_activity_progress_screen">progressScreenActivity</string>
+    <string name="title_activity_quote">quoteActivity</string>
 
 </resources>
