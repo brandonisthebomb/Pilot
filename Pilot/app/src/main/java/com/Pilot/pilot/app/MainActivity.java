@@ -14,6 +14,7 @@ public class MainActivity extends ActionBarActivity {
     {
         Intent intent = new Intent(this, createGoalActivity.class);
         startActivity(intent);
+        hello
     }
 
     public void seeProgressScreen(View view)
