@@ -12,27 +12,18 @@
         <activity
 
             android:name="com.Pilot.pilot.app.MainActivity"
-<<<<<<< HEAD
             android:label="@string/app_name" >
             <receiver android:name="myReceiver">
                 <intent-filter android:enabled="true" android:exported="false">
                     <action android:name="android.intent.action.USER_PRESENT" />
                 </intent-filter>
             </receiver>
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <receiver android:name="myReceiver">
-            <intent-filter android:enabled="true" android:exported="false">
-                <action android:name="android.intent.action.USER_PRESENT" />
-            </intent-filter>
-        </receiver>
-
         <activity
             android:name="com.Pilot.pilot.app.createGoalActivity"
             android:label="@string/title_activity_create_goal" >
