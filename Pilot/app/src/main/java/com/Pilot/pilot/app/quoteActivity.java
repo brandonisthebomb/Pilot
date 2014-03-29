@@ -4,9 +4,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 
@@ -16,12 +20,24 @@ public class quoteActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quote);
-        String text = new String("");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("quotes.txt")));
+        String text = new String();
+        try
+        {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("quotes.txt")));
+            text = reader.readLine();
+            reader.close();
+            TextView quoteDisplay = (TextView)findViewById(R.id.quoteDisplay);
+
+            quoteDisplay.setText(text);
+
+        }
+        catch (IOException e)
+        {
+            System.err.println("FileNotFoundException: " + e.getMessage());
+        }
+
 
     }
-
-    private void
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
