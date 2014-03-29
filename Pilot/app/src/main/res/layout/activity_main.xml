@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
         android:text="Add Goal"
-        android:onClick="startGoalAcivity"
+        android:onClick="startGoalActivity"
         android:background="@android:drawable/btn_default"
         android:layout_below="@+id/menuTitle"
         android:layout_centerHorizontal="true" />
