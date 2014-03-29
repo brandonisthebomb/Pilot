@@ -2,6 +2,7 @@ package com.Pilot.pilot.app;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
@@ -25,10 +26,9 @@ public class quoteActivity extends ActionBarActivity {
         {
             BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("quotes.txt")));
             text = reader.readLine();
+            Log.w("quote", text);
             reader.close();
             TextView quoteDisplay = (TextView)findViewById(R.id.quoteDisplay);
-
-            quoteDisplay.setText(text);
 
         }
         catch (IOException e)
