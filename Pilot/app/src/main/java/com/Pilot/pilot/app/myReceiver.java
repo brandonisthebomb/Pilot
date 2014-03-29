@@ -17,7 +17,7 @@ public class myReceiver extends BroadcastReceiver {
         if (intent.getAction()!=null) {
             if(intent.getAction().equals(Intent.ACTION_USER_PRESENT))
             {
-                Intent start = new Intent(context, MainActivity.class);
+                Intent start = new Intent(context, progressScreenActivity.class);
                 start.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(start);
             }
