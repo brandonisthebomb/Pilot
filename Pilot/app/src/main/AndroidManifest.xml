@@ -2,16 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.Pilot.pilot.app" >
     
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"
 
     <application
+
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+
             android:name="com.Pilot.pilot.app.MainActivity"
             android:label="@string/app_name" >
+            <receiver android:name="myReceiver">
+                <intent-filter android:enabled="true" android:exported="false">
+                    <action android:name="android.intent.action.USER_PRESENT" />
+                </intent-filter>
+            </receiver>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,4 +34,4 @@
         </activity>
     </application>
 
-<
+</manifest>
