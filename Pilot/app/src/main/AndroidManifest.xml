@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.Pilot.pilot.app.createGoalActivity"
+            android:label="@string/title_activity_create_goal" >
+        </activity>
+        <activity
+            android:name="com.Pilot.pilot.app.progressScreenActivity"
+            android:label="@string/title_activity_progress_screen" >
+        </activity>
     </application>
 
 </manifest>
