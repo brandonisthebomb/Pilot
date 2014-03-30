@@ -2,6 +2,7 @@ package com.Pilot.pilot.app;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,7 +28,11 @@ public class progressScreenActivity extends Activity {
         getMenuInflater().inflate(R.menu.progress_screen, menu);
         return true;
     }
-
+    public void seeProgressDetailScreen(View view)
+    {
+        Intent intent = new Intent(this, progressDetail.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
