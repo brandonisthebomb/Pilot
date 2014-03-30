@@ -7,5 +7,12 @@
     <string name="title_activity_create_goal">createGoalActivity</string>
     <string name="title_activity_progress_screen">progressScreenActivity</string>
     <string name="title_activity_quote">quoteActivity</string>
+    <string name="Category">Category</string>
+    <string-array name="categories">
+        <item>Work</item>
+        <item>School</item>
+        <item>Physical</item>
+    </string-array>
+
 
 </resources>
