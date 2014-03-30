@@ -5,15 +5,35 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
-
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.DatePicker;
 
 public class createGoalActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_goal);
+        CheckBox myCheckBox = (CheckBox)findViewById(R.id.checkBox);
+        final DatePicker myDatePicker = (DatePicker)findViewById(R.id.datePicker);
+
+        myCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked)
+                {
+                    myDatePicker.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    myDatePicker.setVisibility(View.GONE);
+                }
+            }
+        });
+
     }
 
 
