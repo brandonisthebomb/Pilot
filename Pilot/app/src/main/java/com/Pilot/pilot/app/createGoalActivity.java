@@ -18,6 +18,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class createGoalActivity extends Activity {
 
     private Spinner spinner;
@@ -103,8 +106,16 @@ public class createGoalActivity extends Activity {
         title = titleField.getText().toString();
         description = descriptionField.getText().toString();
 
+        Set<String> set = new HashSet<String>();
+        set.add("" + year);
+        set.add("" + month);
+        set.add("" + day);
+        set.add(description);
+
+
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putStringSet(title, set);
         editor.commit();
 
         Intent intent = new Intent(this, progressScreenActivity.class);
