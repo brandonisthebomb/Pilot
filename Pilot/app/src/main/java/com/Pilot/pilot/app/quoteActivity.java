@@ -13,6 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Random;
 
 
 public class quoteActivity extends ActionBarActivity {
@@ -25,10 +26,26 @@ public class quoteActivity extends ActionBarActivity {
         try
         {
             BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("quotes.txt")));
-            text = reader.readLine();
-            Log.w("quote", text);
+
+            int numlines = new Integer(9);
+            Random r = new Random();
+            int desiredLine = r.nextInt(numlines);
+
+            int lineCtr = 0;
+            while ((text = reader.readLine()) != null)   {
+                if (lineCtr == desiredLine) {
+                    break;
+                }
+                lineCtr++;
+            }
+
+
             reader.close();
+
+
             TextView quoteDisplay = (TextView)findViewById(R.id.quoteDisplay);
+            quoteDisplay.setText(text);
+
 
         }
         catch (IOException e)
