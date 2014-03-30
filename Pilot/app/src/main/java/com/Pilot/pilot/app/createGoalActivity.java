@@ -2,6 +2,7 @@ package com.Pilot.pilot.app;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -62,6 +63,9 @@ public class createGoalActivity extends Activity {
 
         title = titleField.getText().toString();
         description = descriptionField.getText().toString();
+
+        Intent intent = new Intent(this, progressScreenActivity.class);
+        startActivity(intent);
     }
 
     @Override
