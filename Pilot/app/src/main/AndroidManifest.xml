@@ -38,6 +38,11 @@
             android:label="@string/title_activity_progress_screen" >
         </activity>
         <activity
+            android:name="com.Pilot.pilot.app.progressDetail"
+            android:label="@string/title_activity_progress_detail" >
+        </activity>
+
+        <activity
             android:name="com.Pilot.pilot.app.quoteActivity"
             android:label="@string/title_activity_quote" >
         </activity>

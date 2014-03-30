@@ -10,9 +10,50 @@
     tools:context="com.Pilot.pilot.app.progressDetail">
 
 
+
     <ImageButton
         android:id="@+id/ImageButton01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:src="@drawable/facebook_logo" />
+    <ImageButton
+        android:id="@+id/ImageButton02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AudioFileInfoOverlayText"
+        android:text="Goals"
+        android:textSize="35dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="30dp"
+        android:textColor="@color/LightGreen"
+        android:layout_marginTop="200dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress"
+        android:textSize="30dp"
+        android:textColor="@color/LightGreen"
+        android:layout_marginTop="50dp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share Your Accomplishments!"
+        android:textSize="20dp"
+        android:layout_marginTop="450dp"
+        />
     </RelativeLayout>

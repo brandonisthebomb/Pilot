@@ -2,7 +2,6 @@ package com.Pilot.pilot.app;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
 
 /**
  * Created by tony.xu on 3/30/14.
