@@ -27,6 +27,7 @@
         </receiver>
 
         <activity
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
             android:name="com.Pilot.pilot.app.createGoalActivity"
             android:label="@string/title_activity_create_goal" >
         </activity>
