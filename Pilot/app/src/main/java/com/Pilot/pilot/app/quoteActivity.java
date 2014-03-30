@@ -2,6 +2,7 @@ package com.Pilot.pilot.app;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.ImageView;
@@ -55,11 +56,13 @@ public class quoteActivity extends Activity {
             quoteDisplay.setGravity(Gravity.CENTER);
             quoteDisplay.setTextColor(Color.WHITE);
             quoteDisplay.setTextSize(35);
+            quoteDisplay.setTypeface(null, Typeface.BOLD);
 
             TextView authorDisplay = (TextView)findViewById(R.id.authorDisplay);
             authorDisplay.setText("-" + author);
             authorDisplay.setGravity(Gravity.RIGHT);
             authorDisplay.setTextColor(Color.WHITE);
+            authorDisplay.setTextSize(20);
         }
         catch (IOException e)
         {
