@@ -2,7 +2,9 @@ package com.Pilot.pilot.app;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -47,7 +49,7 @@ public class createGoalActivity extends Activity {
 
     }
 
-    public  void hideSoftKeyboard() {
+    public void hideSoftKeyboard() {
         InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
     }
@@ -100,6 +102,10 @@ public class createGoalActivity extends Activity {
 
         title = titleField.getText().toString();
         description = descriptionField.getText().toString();
+
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.commit();
 
         Intent intent = new Intent(this, progressScreenActivity.class);
         startActivity(intent);
