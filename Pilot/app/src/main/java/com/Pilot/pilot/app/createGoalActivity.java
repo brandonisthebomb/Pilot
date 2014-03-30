@@ -3,7 +3,6 @@ package com.Pilot.pilot.app;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,7 +43,6 @@ public class createGoalActivity extends Activity {
 
     }
 
-
     public void collectData(View view)
     {
         spinner = (Spinner)findViewById(R.id.spinner1);
@@ -64,10 +62,6 @@ public class createGoalActivity extends Activity {
 
         title = titleField.getText().toString();
         description = descriptionField.getText().toString();
-
-        Log.w("title", title);
-        Log.w("description", description);
-
     }
 
     @Override
