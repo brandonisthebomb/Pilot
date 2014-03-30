@@ -9,18 +9,61 @@
     android:id="@+id/quoteView"
     tools:context="com.Pilot.pilot.app.quoteActivity">
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView1"
+            android:background="@drawable/antelope_quote1"/>
 
-   <TextView
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView2"
+            android:background="@drawable/pond_quote2"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView3"
+            android:background="@drawable/brushes_quote3"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView4"
+            android:background="@drawable/desert_quote4"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView5"
+            android:background="@drawable/ducks_quote5"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView6"
+            android:background="@drawable/moon_quote6"/>
+    </LinearLayout>
+
+
+
+    <TextView
         android:id="@+id/quoteDisplay"
         android:layout_width="fill_parent"
         android:layout_height="350dp"
+        style="@style/AudioFileInfoOverlayText"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-   <TextView
+    <TextView
         android:id="@+id/authorDisplay"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        style="@style/AudioFileInfoOverlayText"
         android:layout_alignParentBottom="false"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
