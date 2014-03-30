@@ -22,16 +22,24 @@
             android:textColor="@color/white"
             android:layout_gravity="top|center"
             android:gravity="center|top" />
-        </LinearLayout>
+
+    </LinearLayout>
 
     <SearchView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/searchView"
         android:maxWidth="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="50sp"
-        android:layout_marginRight="15sp"
-        android:layout_alignParentRight="true"/>
+        android:layout_below="@id/lineLayout"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/searchView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:entries="@array/listviews"
+        android:drawSelectorOnTop="false" />
 
 </RelativeLayout>
