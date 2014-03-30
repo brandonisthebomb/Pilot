@@ -13,6 +13,10 @@
         <item>School</item>
         <item>Physical</item>
     </string-array>
+    <string-array name="listviews">
+        <item>Lose Weight</item>
+        <item>Get better grades</item>
+    </string-array>
 
 
 </resources>
