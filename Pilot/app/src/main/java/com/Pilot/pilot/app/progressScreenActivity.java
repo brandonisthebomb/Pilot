@@ -18,18 +18,6 @@ public class progressScreenActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_screen);
 
-        final ListView listView = (ListView)findViewById(R.id.listView);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Toast.makeText(getApplicationContext(),
-                        "Click ListItem Number " + position, Toast.LENGTH_LONG)
-                        .show();
-            }
-        });
-
     }
 
     @Override
