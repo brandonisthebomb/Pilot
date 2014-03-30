@@ -51,10 +51,10 @@
         android:text="Deadline?"
         android:textColor="@color/black"
         android:id="@+id/checkBox"
-        android:layout_below="@+id/editText2"
+        android:clickable="true"
+        android:layout_below="@+id/spinner1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:clickable="true" />
+        android:layout_alignParentStart="true" />
 
     <DatePicker
         android:visibility="gone"
@@ -69,21 +69,22 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="collectData"
         android:text="Finish"
-        android:id="@+id/button"
+        android:id="@+id/finish"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="58dp"
-        android:textSize="30dp" />
+        android:textSize="30dp"/>
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner1"
-        android:layout_above="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:entries="@array/categories"
-        android:prompt="@string/Category" />
+        android:prompt="@string/Category"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

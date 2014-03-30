@@ -3,22 +3,25 @@ package com.Pilot.pilot.app;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class createGoalActivity extends Activity {
 
+    private Spinner spinner;
+    public String category;
+    public String title;
+    public int year;
+    public int month;
+    public int day;
+    public String description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,22 +33,42 @@ public class createGoalActivity extends Activity {
         myCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if(isChecked)
-                {
+                if (isChecked) {
                     myDatePicker.setVisibility(View.VISIBLE);
-                }
-                else
-                {
+                } else {
                     myDatePicker.setVisibility(View.GONE);
                 }
             }
         });
 
+
     }
 
 
+    public void collectData(View view)
+    {
+        spinner = (Spinner)findViewById(R.id.spinner1);
+        category = String.valueOf(spinner);
 
+        CheckBox myCheckBox = (CheckBox)findViewById(R.id.checkBox);
+        if(myCheckBox.isChecked())
+        {
+            DatePicker myDatePicker = (DatePicker)findViewById(R.id.datePicker);
+            year = myDatePicker.getYear();
+            month = myDatePicker.getMonth();
+            day = myDatePicker.getDayOfMonth();
+        }
 
+        EditText descriptionField = (EditText)findViewById(R.id.editText2);
+        EditText titleField = (EditText)findViewById(R.id.editText);
+
+        title = titleField.getText().toString();
+        description = descriptionField.getText().toString();
+
+        Log.w("title", title);
+        Log.w("description", description);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
