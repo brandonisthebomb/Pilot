@@ -27,7 +27,7 @@
         android:id="@+id/searchView"
         android:maxWidth="200dp"
         android:layout_below="@+id/calendarView"
-        android:layout_alignBottom="@+id/calendarView"
+        android:layout_alignBottom="@+id/calendarView"/>
 
     <CalendarView
         android:layout_width="wrap_content"
