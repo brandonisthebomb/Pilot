@@ -3,8 +3,10 @@ package com.Pilot.pilot.app;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -44,7 +46,9 @@ public class quoteActivity extends ActionBarActivity {
 
 
             TextView quoteDisplay = (TextView)findViewById(R.id.quoteDisplay);
-            quoteDisplay.setText(text);
+            quoteDisplay.setText('"'+text+'"');
+            quoteDisplay.setTextSize(30);
+            quoteDisplay.setGravity(Gravity.CENTER);
 
 
         }
