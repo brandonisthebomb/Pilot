@@ -18,6 +18,7 @@ public class quoteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quote);
         String text = new String();
+        String author = new String();
         try
         {
             BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("quotes.txt")));
@@ -28,6 +29,7 @@ public class quoteActivity extends Activity {
 
             int lineCtr = 0;
             while ((text = reader.readLine()) != null)   {
+                author = reader.readLine();
                 if (lineCtr == desiredLine) {
                     break;
                 }
@@ -37,13 +39,14 @@ public class quoteActivity extends Activity {
 
             reader.close();
 
-
             TextView quoteDisplay = (TextView)findViewById(R.id.quoteDisplay);
             quoteDisplay.setText('"'+text+'"');
-            quoteDisplay.setTextSize(30);
             quoteDisplay.setGravity(Gravity.CENTER);
+            quoteDisplay.setTextSize(35);
 
-
+            TextView authorDisplay = (TextView)findViewById(R.id.authorDisplay);
+            authorDisplay.setText("-" + author);
+            authorDisplay.setGravity(Gravity.RIGHT);
         }
         catch (IOException e)
         {
