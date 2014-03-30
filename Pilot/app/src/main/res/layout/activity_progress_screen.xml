@@ -9,8 +9,15 @@
     tools:context="com.Pilot.pilot.app.progressScreenActivity">
 
     <TextView
-        android:text="@string/hello_world"
+        android:id="@+id/menuTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Your Progress"
+        android:textSize="50dp"
+        android:textColor="@color/Black"
+        android:layout_gravity="top|center"
+        android:gravity="center|top"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
